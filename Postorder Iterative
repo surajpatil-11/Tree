@@ -1,0 +1,22 @@
+void postOrder(Node* root)
+{
+   if(not root) return ;
+  
+   stack <Node *> st1,st2;
+
+   st1.push(root);
+
+   while(not st1.empty())
+   {
+       root = st1.top();
+       st1.pop();
+       st2.push(root);
+       if(root->left)  st1.push(root->left);
+       if(root->right) st1.push(root->right);
+   }
+   while(not st2.empty())
+   {
+       cout << st2.top()->data << " ";
+       st2.pop();
+   }
+}

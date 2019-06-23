@@ -1,0 +1,18 @@
+void preorder(Node* root)
+{
+   if(not root) return ;
+   stack <Node*> st;
+   
+   while(root!=NULL or !st.empty())
+   {
+       while(root)
+       {
+           cout << root->data << " ";
+           st.push(root);
+           root = root->left; 
+       }
+       root=st.top();
+       st.pop();
+       root = root->right;
+   }
+}

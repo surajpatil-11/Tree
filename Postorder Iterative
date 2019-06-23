@@ -1,3 +1,16 @@
+/*
+   Create 2 stack 
+   1) initialize  stack 1 with root
+   2) pop element from stack 1 untill it is not empty and push that poped element in stack 2.
+   3) push left and right node of poped element to stack 1 .
+   4) print stack 2
+
+
+
+*/
+
+
+
 void postOrder(Node* root)
 {
    if(not root) return ;

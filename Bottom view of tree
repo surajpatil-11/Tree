@@ -1,0 +1,15 @@
+void f(Node *p,int i,map<int,int> &mp)
+{
+    if(not p) return ;
+    mp[i] = p->data;
+    f(p->left,i-1,mp);
+    f(p->right,i+1,mp);
+}
+
+void bottomView(Node *root)
+{
+   map <int,int> mp ;
+   map <int,int> :: iterator  it ;
+   f(root,0,mp);
+   for(it=mp.begin();it!=mp.end();it++) cout << it->second << " ";
+}

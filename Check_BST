@@ -1,0 +1,20 @@
+/*
+          -inf  (10)  inf
+              /      \
+        inf (8) 10 10 (11) inf  
+ ref :- Tushar roy video on youtube
+*/
+
+
+#define inf 1000000
+
+bool f(Node* root,int l,int u)
+{
+    if(not root) return true ;
+    if(not(root->data>=l and root->data<=u) ) return false;
+    return f(root->left,l,root->data) and f(root->right,root->data,u);
+}
+
+bool isBST(Node* root) {
+    return f(root,-inf,inf);
+}

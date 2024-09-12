@@ -4,7 +4,7 @@
         inf (8) 10 10 (11) inf  
  ref :- Tushar roy video on youtube
 */
-
+ //Problem Link : https://www.geeksforgeeks.org/problems/check-for-bst/1
 
 #define inf 1000000
 
